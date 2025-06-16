@@ -1,0 +1,6 @@
+ERROR: Disk full
+INFO: User login
+ERROR: Timeout
+INFO: File saved
+WARNING: Low memory
+ERROR: Disk full
