@@ -1,0 +1,26 @@
+[INFO] ✅ Authenticated with Odoo.
+[INFO] 📥 Loaded 6 credit notes from Excel.
+
+[DEBUG] ➡️  Processing row 1: {'customer': 'Platinum House', 'product': 'Acoustic Bloc Screens', 'quantity': 1, 'account': 201003, 'unit_price': 1000.0, 'vat': 14.0, 'wht': 1.0}
+[INFO] ✅ Successfully created credit note with ID: 61
+
+[DEBUG] ➡️  Processing row 2: {'customer': 'Platinum House', 'product': 'Conference Chair', 'quantity': 10, 'account': 201003, 'unit_price': 2000.0, 'vat': 14.0, 'wht': 1.0}
+[INFO] ✅ Successfully created credit note with ID: 62
+
+[DEBUG] ➡️  Processing row 3: {'customer': 'Platinum House', 'product': 'Cabinet with Doors', 'quantity': 100, 'account': 201003, 'unit_price': 3000.0, 'vat': 14.0, 'wht': 1.0}
+[INFO] ✅ Successfully created credit note with ID: 63
+
+[DEBUG] ➡️  Processing row 4: {'customer': 'Platinum House', 'product': 'Corner Desk Right Sit', 'quantity': 5, 'account': 201003, 'unit_price': 4000.0, 'vat': 14.0, 'wht': 1.0}
+[INFO] ✅ Successfully created credit note with ID: 64
+
+[DEBUG] ➡️  Processing row 5: {'customer': 'Platinum House', 'product': 'Chair floor protection', 'quantity': 1000, 'account': 201003, 'unit_price': 5000.0, 'vat': 14.0, 'wht': 1.0}
+[INFO] ✅ Successfully created credit note with ID: 65
+
+[DEBUG] ➡️  Processing row 6: {'customer': 'Platinum House', 'product': 'Customized Cabinet (Metric)', 'quantity': 6, 'account': 201003, 'unit_price': 6000.0, 'vat': 14.0, 'wht': 1.0}
+[INFO] ✅ Successfully created credit note with ID: 66
+
+[INFO] 
+📊 Summary Report
+[INFO]    ✅ Success: 6
+[INFO]    ❌ Failed: 0
+
