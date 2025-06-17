@@ -1,0 +1,12 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+
+# Logs
+OdooAutomation/logs/
+
+# Environment files
+.env
+
+# Office temp files
+~$*.xlsx

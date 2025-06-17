@@ -1,3 +1,5 @@
+import xmlrpc.client
+
 def validate_credit_note_data(data):
     required_fields = ["customer", "product", "quantity", "account", "unit_price"]
     errors = []
@@ -40,3 +42,13 @@ def validate_credit_note_data(data):
             errors.append("WHT must be a number")
 
     return errors
+
+def validate_odoo_instance(url):
+    try:
+        common = xmlrpc.client.ServerProxy(f"{url}/xmlrpc/2/common")
+        _ = common.version()
+        return True
+    except Exception as e:
+        print(f"🌐 Failed to reach Odoo instance: {e}")
+        return False
+
