@@ -1,4 +1,7 @@
 import xmlrpc.client
+from utils.logger import setup_logger
+
+Logger = setup_logger()
 
 class OdooConnector:
     def __init__(self, url, db, username, password):
@@ -27,17 +30,15 @@ class OdooConnector:
         return ids[0] if ids else None
 
     def create_credit_note(self, credit_note):
-        print(f"[DEBUG] Searching for customer: {credit_note['customer']}")
+        Logger.debug(f"Searching for customer: {credit_note['customer']}")
         partner_id = self.search_id("res.partner", credit_note["customer"])
-        print(f"[DEBUG] Partner ID: {partner_id}")
-
-        print(f"[DEBUG] Searching for product: {credit_note['product']}")
+        Logger.debug(f"Partner ID: {partner_id}")
+        Logger.debug(f"Searching for product: {credit_note['product']}")
         product_id = self.search_id("product.product", credit_note["product"])
-        print(f"[DEBUG] Product ID: {product_id}")
-
-        print(f"[DEBUG] Searching for account: {credit_note['credit_notes_account']}")
+        Logger.debug(f"Product ID: {product_id}")
+        Logger.debug(f"Searching for account: {credit_note['credit_notes_account']}")
         account_id = self.search_id("account.account", credit_note["credit_notes_account"], name_field="code")
-        print(f"[DEBUG] Account ID: {account_id}")
+        Logger.debug(f"Account ID: {account_id}")
 
         vat_tax_id = self.search_id("account.tax", f"{credit_note['vat']}%") if credit_note["vat"] > 0 else None
         wht_tax_id = self.search_id("account.tax", f"{credit_note['wht']}%") if credit_note["wht"] > 0 else None
